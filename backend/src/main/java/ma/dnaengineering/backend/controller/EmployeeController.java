@@ -20,12 +20,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    /**
-     * Endpoint pour traiter le téléchargement du fichier CSV.
-     *
-     * @param file Le fichier CSV à télécharger.
-     * @return ResponseEntity indiquant si le téléchargement a réussi ou non.
-     */
+
     @PostMapping("/upload")
     public ResponseEntity<String> uploadEmployeeData(@RequestParam("file") MultipartFile file) {
         try {
@@ -37,11 +32,7 @@ public class EmployeeController {
         }
     }
 
-    /**
-     * Endpoint pour obtenir la liste des employés.
-     *
-     * @return ResponseEntity contenant la liste des employés ou un message d'erreur.
-     */
+
     @GetMapping
     public ResponseEntity<List<Employee>> getEmployees() {
         try {
@@ -52,11 +43,7 @@ public class EmployeeController {
         }
     }
 
-    /**
-     * Endpoint pour obtenir la moyenne des salaires par titre de poste.
-     *
-     * @return ResponseEntity contenant la carte des moyennes de salaires par titre de poste ou un message d'erreur.
-     */
+
     @GetMapping("/average-salary")
     public ResponseEntity<Map<String, BigDecimal>> getAverageSalaryByJobTitle() {
         try {

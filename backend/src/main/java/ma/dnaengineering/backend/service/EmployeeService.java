@@ -16,16 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class EmployeeService {
 
-    /**
-     * Lit le fichier CSV et retourne la liste des employés.
-     * @return La liste des employés.
-     * @throws IOException En cas d'erreur lors de la lecture du fichier.
-     */
 
-    /**
-     * Calcule la moyenne des salaires pour chaque titre de poste.
-     * @return Une carte (Map) contenant le titre du poste en tant que clé et la moyenne des salaires en tant que valeur.
-     */
     public Map<String, BigDecimal> calculateAverageSalaryByJobTitle() throws IOException {
         List<Employee> employees = parseCSV();
         Map<String, BigDecimal> jobTitleAverageSalaryMap = new HashMap<>();
